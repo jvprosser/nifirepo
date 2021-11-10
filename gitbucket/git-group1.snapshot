@@ -1,0 +1,42 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ ],
+        "controllerServices" : [ ],
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ {
+          "componentType" : "FUNNEL",
+          "groupIdentifier" : "2f203a5f-51fd-3890-adc2-57d9f82cd97b",
+          "identifier" : "6e4e7fff-d6a6-3334-a459-cba27c4aab7b",
+          "position" : {
+            "x" : 587.0,
+            "y" : 326.0
+          }
+        } ],
+        "identifier" : "2f203a5f-51fd-3890-adc2-57d9f82cd97b",
+        "inputPorts" : [ ],
+        "labels" : [ ],
+        "name" : "git-group1",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 509.0,
+          "y" : 307.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}

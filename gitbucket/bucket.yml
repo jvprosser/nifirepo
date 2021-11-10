@@ -1,0 +1,6 @@
+flows:
+  5c30666f-0bb5-4298-88ae-17e9112aa881: {ver: 1, file: git-group1.snapshot, comments: version
+      comments written in NiFi "Save Flow Version" UI, author: jprosser, created: 1636569505602,
+    flowName: git-group1, flowDesc: written in NiFi "Save Flow Version" UI}
+layoutVer: 1
+bucketId: 30614ba3-1d87-4cdb-968c-91aa60a5b3a1
