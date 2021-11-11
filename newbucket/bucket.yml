@@ -1,5 +1,5 @@
 flows:
-  9d3e2cfe-d056-4b3d-a469-4aa806057f7c: {ver: 1, file: newflow.snapshot, comments: test
-      v1, author: jprosser, created: 1636658216427, flowName: newflow, flowDesc: test}
+  9d3e2cfe-d056-4b3d-a469-4aa806057f7c: {ver: 2, file: newflow.snapshot, comments: '',
+    author: jprosser, created: 1636661243898, flowName: newflow, flowDesc: test}
 layoutVer: 1
 bucketId: 78810b2e-5c0a-4130-a4ff-9b80aaf97e8c

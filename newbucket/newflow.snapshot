@@ -8,11 +8,272 @@
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
-        "connections" : [ ],
-        "controllerServices" : [ ],
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+            "id" : "655068bc-9898-3845-b825-7798f5fbaaa2",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+          "identifier" : "9143d28d-c2cc-3366-b503-e2af6260223d",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+            "id" : "3bf6dd1f-ec95-3486-a9a5-bcf885741a52",
+            "name" : "PutHive3QL",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+            "id" : "065cbdda-aca1-3a09-b5c0-eabe9496181d",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+          "identifier" : "b264be54-a304-388c-afc8-6b482ec4abdb",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+            "id" : "3bf6dd1f-ec95-3486-a9a5-bcf885741a52",
+            "name" : "PutHive3QL",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+            "id" : "772e3ae5-c42f-3dfb-8153-eb633da11575",
+            "name" : "Funnel",
+            "type" : "FUNNEL"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+          "identifier" : "b1df26b2-1195-3f17-8f59-2f13c6855f89",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "retry" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+            "id" : "3bf6dd1f-ec95-3486-a9a5-bcf885741a52",
+            "name" : "PutHive3QL",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ {
+          "bundle" : {
+            "artifact" : "nifi-hive3-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.13.2.2.2.3.0-56"
+          },
+          "componentType" : "CONTROLLER_SERVICE",
+          "controllerServiceApis" : [ {
+            "bundle" : {
+              "artifact" : "nifi-hive-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.13.2.2.2.3.0-56"
+            },
+            "type" : "org.apache.nifi.dbcp.hive.Hive3DBCPService"
+          }, {
+            "bundle" : {
+              "artifact" : "nifi-standard-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.13.2.2.2.3.0-56"
+            },
+            "type" : "org.apache.nifi.dbcp.DBCPService"
+          }, {
+            "bundle" : {
+              "artifact" : "nifi-hive-services-api-nar",
+              "group" : "org.apache.nifi",
+              "version" : "1.13.2.2.2.3.0-56"
+            },
+            "type" : "org.apache.nifi.dbcp.hive.HiveDBCPService"
+          } ],
+          "groupIdentifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+          "identifier" : "a950f858-0ee2-3867-aacc-755ae83a7236",
+          "name" : "Hive3ConnectionPool",
+          "properties" : {
+            "dbcp-min-idle-conns" : "0",
+            "dbcp-min-evictable-idle-time" : "30 mins",
+            "dbcp-max-conn-lifetime" : "-1",
+            "hive-max-total-connections" : "8",
+            "dbcp-time-between-eviction-runs" : "-1",
+            "dbcp-soft-min-evictable-idle-time" : "-1",
+            "hive-max-wait-time" : "500 millis",
+            "dbcp-max-idle-conns" : "8"
+          },
+          "propertyDescriptors" : {
+            "dbcp-min-idle-conns" : {
+              "displayName" : "Minimum Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-min-idle-conns",
+              "sensitive" : false
+            },
+            "hive-db-password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "hive-db-password",
+              "sensitive" : true
+            },
+            "dbcp-min-evictable-idle-time" : {
+              "displayName" : "Minimum Evictable Idle Time",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-min-evictable-idle-time",
+              "sensitive" : false
+            },
+            "hive-config-resources" : {
+              "displayName" : "Hive Configuration Resources",
+              "identifiesControllerService" : false,
+              "name" : "hive-config-resources",
+              "sensitive" : false
+            },
+            "kerberos-credentials-service" : {
+              "displayName" : "Kerberos Credentials Service",
+              "identifiesControllerService" : true,
+              "name" : "kerberos-credentials-service",
+              "sensitive" : false
+            },
+            "dbcp-max-conn-lifetime" : {
+              "displayName" : "Max Connection Lifetime",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-max-conn-lifetime",
+              "sensitive" : false
+            },
+            "Kerberos Password" : {
+              "displayName" : "Kerberos Password",
+              "identifiesControllerService" : false,
+              "name" : "Kerberos Password",
+              "sensitive" : true
+            },
+            "Validation-query" : {
+              "displayName" : "Validation query",
+              "identifiesControllerService" : false,
+              "name" : "Validation-query",
+              "sensitive" : false
+            },
+            "Kerberos Keytab" : {
+              "displayName" : "Kerberos Keytab",
+              "identifiesControllerService" : false,
+              "name" : "Kerberos Keytab",
+              "sensitive" : false
+            },
+            "hive-max-total-connections" : {
+              "displayName" : "Max Total Connections",
+              "identifiesControllerService" : false,
+              "name" : "hive-max-total-connections",
+              "sensitive" : false
+            },
+            "dbcp-time-between-eviction-runs" : {
+              "displayName" : "Time Between Eviction Runs",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-time-between-eviction-runs",
+              "sensitive" : false
+            },
+            "hive-db-connect-url" : {
+              "displayName" : "Database Connection URL",
+              "identifiesControllerService" : false,
+              "name" : "hive-db-connect-url",
+              "sensitive" : false
+            },
+            "Kerberos Principal" : {
+              "displayName" : "Kerberos Principal",
+              "identifiesControllerService" : false,
+              "name" : "Kerberos Principal",
+              "sensitive" : false
+            },
+            "dbcp-soft-min-evictable-idle-time" : {
+              "displayName" : "Soft Minimum Evictable Idle Time",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-soft-min-evictable-idle-time",
+              "sensitive" : false
+            },
+            "hive-max-wait-time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "hive-max-wait-time",
+              "sensitive" : false
+            },
+            "dbcp-max-idle-conns" : {
+              "displayName" : "Max Idle Connections",
+              "identifiesControllerService" : false,
+              "name" : "dbcp-max-idle-conns",
+              "sensitive" : false
+            },
+            "hive-db-user" : {
+              "displayName" : "Database User",
+              "identifiesControllerService" : false,
+              "name" : "hive-db-user",
+              "sensitive" : false
+            }
+          },
+          "type" : "org.apache.nifi.dbcp.hive.Hive3ConnectionPool"
+        } ],
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-        "funnels" : [ ],
+        "funnels" : [ {
+          "componentType" : "FUNNEL",
+          "groupIdentifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+          "identifier" : "772e3ae5-c42f-3dfb-8153-eb633da11575",
+          "position" : {
+            "x" : 665.0,
+            "y" : 109.0
+          }
+        }, {
+          "componentType" : "FUNNEL",
+          "groupIdentifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+          "identifier" : "655068bc-9898-3845-b825-7798f5fbaaa2",
+          "position" : {
+            "x" : 1360.0,
+            "y" : 336.0
+          }
+        }, {
+          "componentType" : "FUNNEL",
+          "groupIdentifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+          "identifier" : "065cbdda-aca1-3a09-b5c0-eabe9496181d",
+          "position" : {
+            "x" : 739.0,
+            "y" : 524.0
+          }
+        } ],
         "identifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
         "inputPorts" : [ ],
         "labels" : [ ],
@@ -23,7 +284,80 @@
           "y" : 221.0
         },
         "processGroups" : [ ],
-        "processors" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-hive3-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.13.2.2.2.3.0-56"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "daaf1534-f6a1-30fc-a2f0-bb08dceb5a47",
+          "identifier" : "3bf6dd1f-ec95-3486-a9a5-bcf885741a52",
+          "name" : "PutHive3QL",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 569.0,
+            "y" : 273.0
+          },
+          "properties" : {
+            "statement-delimiter" : ";",
+            "hive3-dbcp-service" : "a950f858-0ee2-3867-aacc-755ae83a7236",
+            "hive3-query-timeout" : "0",
+            "hive3-charset" : "UTF-8",
+            "rollback-on-failure" : "false",
+            "hive-batch-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "statement-delimiter" : {
+              "displayName" : "Statement Delimiter",
+              "identifiesControllerService" : false,
+              "name" : "statement-delimiter",
+              "sensitive" : false
+            },
+            "hive3-dbcp-service" : {
+              "displayName" : "Hive Database Connection Pooling Service",
+              "identifiesControllerService" : true,
+              "name" : "hive3-dbcp-service",
+              "sensitive" : false
+            },
+            "hive3-query-timeout" : {
+              "displayName" : "Query timeout",
+              "identifiesControllerService" : false,
+              "name" : "hive3-query-timeout",
+              "sensitive" : false
+            },
+            "hive3-charset" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "hive3-charset",
+              "sensitive" : false
+            },
+            "rollback-on-failure" : {
+              "displayName" : "Rollback On Failure",
+              "identifiesControllerService" : false,
+              "name" : "rollback-on-failure",
+              "sensitive" : false
+            },
+            "hive-batch-size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "hive-batch-size",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.hive.PutHive3QL",
+          "yieldDuration" : "1 sec"
+        } ],
         "remoteProcessGroups" : [ ],
         "variables" : { }
       },
